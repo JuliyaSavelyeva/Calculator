@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/libs/jquery-ui.min.css">
+    <link rel="stylesheet" href="assets/libs/jquery-ui.theme.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-img">
+                <img src="assets/img/cat.png" alt="image">
+            </div>
+            <div class="header-title">
+                <h1>Calculator</h1>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main-inputs">
+                <div class="main-inputs__column">
+                    <h6>Доход в месяц</h6>
+                    <div class="main-inputs__column-wrapper">
+                        <input type="number" placeholder="Salary" id="income-salary">
+                        <input type="number" placeholder="Freelance" id="income-freelance">
+                        <input type="number" placeholder="Incom-extra" id="income-extra-1">
+                        <input type="number" placeholder="Incom-extra" id="income-extra-2">
+                    </div>
+                </div>
+                <div class="main-inputs__column">
+                    <h6>Обязательные расходы</h6>
+                    <div class="main-inputs__column-wrapper">
+                        <input type="number" placeholder="Rent apartment" id="costs-flat">
+                        <input type="number" placeholder="House-services" id="costs-house-services">
+                        <input type="number" placeholder="Transport" id="costs-transport">
+                        <input type="number" placeholder="Credit" id="costs-credit">
+                    </div>
+                </div>
+                <div class="main-inputs__column available">
+                    <div class="total-numb">
+                        <h6>Доступно в месяц</h6>
+                        <input type="number" value="0" id="total-month" readonly>
+                    </div>
+                    <div class="total-numb">
+                        <h6>Доступно в день</h6>
+                        <input type="number" value="0" id="total-day" readonly>
+                    </div>
+                    <div class="total-numb">
+                        <h6>Накопим за год</h6>
+                        <input type="number" value="0" id="total-year" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-range">
+                <h6>Копилка (сколько откладываем)</h6>
+                <div class="main-range__wrapper">
+                    <div id="slider-range"></div>
+                    <div class="slider-result">
+                        <input type="text" id="percent" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-results">
+                <div class="total-numb">
+                    <h6>Копим:</h6>
+                    <input type="number" id="accumulation" value="0" readonly>
+                </div>
+                <div class="total-numb">
+                    <h6>Тратим:</h6>
+                    <input type="number" id="spend" value="0" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/libs/jquery-ui.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

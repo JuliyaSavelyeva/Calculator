@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    &-title {
+        font-family: $font-header;
+        font-size: $size-header1;
+        color: $color-header;
+        letter-spacing: 2px;
+
+        @media (max-width: $large) and (min-width: $small + 1) {
+            font-size: $size-header1 / 1.5;
+        }
+
+        @media (max-width: $small) {
+            font-size: $size-header1 / 2;
+        }
+    }
+
+    &-img {
+        flex: 0 0 308px;
+
+        @media (max-width: $large) and (min-width: $small + 1) {
+            flex: 0 0 208px;
+        }
+
+        @media (max-width: $small) and (min-width: $xsmall +1) {
+            flex: 0 0 108px;
+        }
+
+        @media (max-width: $xsmall) {
+            display: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }  
+    }
+}
